@@ -12,7 +12,7 @@ weatherForecast.addEventListener('submit', (e) => {
     messageOne.textContent = 'Loading ....'
     messageTwo.textContent = ''
     const Locat = search.value
-    fetch('http://localhost:3000/weather?address='+Locat).then((response) => {
+    fetch('/weather?address='+Locat).then((response) => {
     response.json().then((data) => {
         if(data.Error) {
             messageOne.textContent = data.Error

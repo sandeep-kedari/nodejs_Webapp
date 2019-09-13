@@ -1,9 +1,12 @@
 const path = require('path')
 const express = require('express');
 const hbs = require('hbs')
-const app = express();
+
 const geocode = require('./utils/geocode.js');
 const forecast = require('./utils/forecast.js');
+
+const app = express();
+const port  = process.env.PORT || 3000
 
 //app.com
 //app.com/help
@@ -111,8 +114,8 @@ app.get('*', (req, res) => {
 //     res.send('404 Page not Found');
 // })
 
-app.listen(3000, () => {
-    console.log(' Server Started Successfully..!!')
+app.listen(port, () => {
+    console.log(' Server Started Successfully.. on ' + port)
 });
 
 
