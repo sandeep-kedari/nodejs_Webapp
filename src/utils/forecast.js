@@ -8,7 +8,7 @@ const forecast = (latitude, Longitude, callback) => {
         } else if(body.error) {
            callback("Search seems in correct check for new one Please.. !!", undefined)
         } else{
-            callback(undefined, body.currently.summary)
+            callback(undefined, body.daily.summary)
         }
 
     })

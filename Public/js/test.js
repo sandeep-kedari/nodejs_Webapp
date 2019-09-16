@@ -18,7 +18,7 @@ weatherForecast.addEventListener('submit', (e) => {
             messageOne.textContent = data.Error
             //console.log( "URL Ivalid..!!", data.Error);
         } else {
-            messageOne.textContent = data.Location
+            messageOne.textContent = data.Forecast
             //console.log( " Data " + data.Location)
         }
     })
